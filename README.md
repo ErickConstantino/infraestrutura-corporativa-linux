@@ -21,11 +21,9 @@ Nesta primeira fase, o servidor Debian foi configurado para atuar como o coraç�
 ### 📸 Evidências e Validação
 
 **1. Cliente recebendo IP corporativo (DHCP)**
-*(Nota: Substitua o caminho abaixo pelo nome do seu print do DHCP)*
 ![IP Dinâmico DHCP](./assets/DHCP.png)
 
 **2. Navegação via Firewall/NAT (DNS e Roteamento)**
-*(Nota: Substitua o caminho abaixo pelo nome do seu print do Ping no Google)*
 ![Ping Externo](./assets/ping.png)
 
 ---
