@@ -94,7 +94,8 @@ Reinicie o serviço de rede para aplicar o IP novo:
 
 Bash
 systemctl restart networking
-🛡️ Passo 3: Ativando o Roteamento e o Firewall NAT (nftables)
+
+Passo 3: Ativando o Roteamento e o Firewall NAT (nftables)
 Agora vamos transformar o Debian em um roteador, fazendo com que ele compartilhe a internet da placa externa (enp0s3) com a placa interna (enp0s8).
 
 Primeiro, diga ao sistema operacional que ele tem permissão para encaminhar pacotes:
@@ -113,7 +114,9 @@ Bash
 nft add table ip nat
 nft add chain ip nat postrouting { type nat hook postrouting priority 100 \; }
 nft add rule ip nat postrouting oifname "enp0s3" masquerade
-🛜 Passo 4: Configurando o Servidor DHCP (isc-dhcp-server)
+
+
+Passo 4: Configurando o Servidor DHCP (isc-dhcp-server)
 O DHCP vai entregar as configurações de rede para qualquer computador que plugar na nossa rede interna de forma automática.
 
 Instale o serviço:
@@ -148,7 +151,9 @@ Salve, saia do arquivo e ligue o serviço:
 Bash
 systemctl restart isc-dhcp-server
 systemctl enable isc-dhcp-server
-🔍 Passo 5: Configurando o Servidor DNS (Bind9 / named)
+
+
+Passo 5: Configurando o Servidor DNS (Bind9 / named)
 O DNS vai traduzir nomes de sites (como google.com) em IPs. Ele vai guardar um cache local para deixar a navegação interna muito mais rápida.
 
 Instale o Bind9:
@@ -185,7 +190,9 @@ Ative o serviço usando o nome real do processo de segundo plano do sistema (nam
 Bash
 systemctl restart named
 git systemctl enable named
-🖥️ Passo 6: A Prova de Fogo (Validando no Cliente Windows)
+
+
+Passo 6: A Prova de Fogo (Validando no Cliente Windows)
 Agora vamos testar se o seu trabalho deu certo. Ligue a sua máquina virtual Windows Client.
 
 No Windows, abra o menu iniciar, digite cmd e abra o Prompt de Comando.
