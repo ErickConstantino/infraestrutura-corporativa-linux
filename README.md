@@ -30,31 +30,6 @@ Nesta primeira fase, o servidor Debian foi configurado para atuar como o coraç�
 *Status: Aguardando início da Fase 2 (Servidor de Arquivos e Domínio com Samba).*
 
 
-# 📖 Guia Passo a Passo: Construindo a Rede Core do Zero
-
-Este é um tutorial detalhado, projetado para que **qualquer pessoa (mesmo sem experiência prévia em Linux ou Redes)** consiga replicar este laboratório corporativo do absoluto zero. 
-
----
-
-## 🛠️ Cenário e Tabela de Configurações
-
-Antes de começar, entenda as regras do nosso ambiente. Você pode alterar os valores da coluna **"Seu Valor (Customizável)"**, mas lembre-se de substituir a sua escolha em todas as etapas do tutorial!
-
-| Parâmetro de Rede | Valor Padrão do Projeto | Tipo | O que significa? |
-| :--- | :--- | :--- | :--- |
-| **Interface WAN** | `enp0s3` | 🚨 Fixo (Verifique o seu) | A placa que recebe internet da sua casa. |
-| **Interface LAN** | `enp0s8` | 🚨 Fixo (Verifique o seu) | A placa que vai distribuir internet para a rede interna. |
-| **IP do Servidor** | `192.168.10.1` | 🟢 Customizável | O endereço fixo do seu servidor Debian na rede interna. |
-| **Máscara de Rede** | `/24` ou `255.255.255.0` | 🟢 Customizável | Define que a sua rede pode ter até 254 computadores. |
-| **Nome da Rede Virtual** | `rede-corporativa` | 🟢 Customizável | O nome do "cabo virtual" dentro do VirtualBox. |
-| **Escopo DHCP** | `192.168.10.100` a `192.168.10.200` | 🟢 Customizável | Faixa de IPs que os clientes vão receber automaticamente. |
-| **Domínio Local** | `empresa.local` | 🟢 Customizável | O sufixo de nome da sua rede interna. |
-
----
-
-## 📖 Guia Passo a Passo: Construindo a Rede Core do Zero
-
-Este é um tutorial detalhado, projetado para que **qualquer pessoa (mesmo sem experiência prévia em Linux ou Redes)** consiga replicar este laboratório corporativo do absoluto zero.
 
 ---
 
